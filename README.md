@@ -1,6 +1,6 @@
 # project
 For Privoxy \
-docker build -t privoxy . \
+docker build -t privoxy .
 
 docker run -p 8118:8118 privoxy:latest
 
