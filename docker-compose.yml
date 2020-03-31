@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+    image: protonvpn-ng:template
+    volumes:
+      - "/home/ubuntu/Documents/ProtonVPN-ng/protonvpnactivate.sh:/tmp/protonvpnactivate.sh:rw"
+      - "/home/ubuntu/Documents/ProtonVPN-ng/entrypoint.sh:/tmp/entrypoint.sh:rw"
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    stdin_open: true
+    tty: true
+    privileged: true
+    restart: unless-stopped
+    command: /tmp/entrypoint.sh
