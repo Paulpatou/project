@@ -1,0 +1,12 @@
+---
+- name: sudo
+  hosts: client
+  become: true
+  become_user: ubuntu
+  become_method: sudo
+  become_pass: toor
+
+  tasks:
+   - name: Install ncdu
+     apt:
+       upgrade: dist
