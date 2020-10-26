@@ -1,11 +1,11 @@
 #!/usr/bin/expect
 spawn protonvpn init
 expect "username"
-send "7zXDARq-dXptmPu7C.osMAEb\r"
+send "user\r"
 expect "password"
-send "NpD1BDMREDcCcWweinapbmqu\r"
+send "password\r"
 expect "password"
-send "NpD1BDMREDcCcWweinapbmqu\r"
+send "password\r"
 expect "plan"
 send "1\r"
 expect "other"
