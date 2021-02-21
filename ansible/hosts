@@ -11,3 +11,21 @@ ansible_shell_type=cmd
 
 
 Usage: ansible windows -i host -m win_ping
+
+
+
+with forward local port 
+
+[windows]
+192.168.1.249
+
+[windows:vars]
+ansible_user=ansible
+ansible_password=ansible
+ansible_port=44444
+ansible_connection=ssh
+ansible_shell_type=cmd
+
+
+ssh -L *:44444:192.168.122.54:22 127.0.0.1
+https://robotmoon.com/ssh-tunnels/#local-port-forwarding
